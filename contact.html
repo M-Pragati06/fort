@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
+	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <script  src="http://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Times New Roman', Times, serif;
+  }
+  
+  nav 
+  #google_element {
+    width: 25%;
+    text-align: center;
+    border-radius: 15px;
+    float: right;
+    margin-top: -50px;
+    
+  }
+  
+  ul{
+    list-style: none;
+    background-color:#FF6C22 ;
+  }
+  ul li{
+    display:inline-block;
+    position: relative;
+    
+  }
+  ul li a{
+      display: block;
+      padding: 25px 25px;
+      color: white;
+      text-decoration: none;
+      text-align: center;
+      font-size: 20px;
+    font-weight: bold; 
+  }
+  ul.menu a:hover{
+    background-color:rgb(219, 71, 17);
+   }
+  body{
+    background-image: linear-gradient(
+  to right,
+  #C5FFF8 0%,
+  #5FBDFF 51%,
+  #C5FFF8 100%
+);
+
+  }
+.heading{
+    font-weight: 900;
+    color:darkred;
+    font-size:40px;
+    font-family:'Times New Roman', Times, serif;
+    
+   
+}
+.heading:hover{
+  font-size:41px ;
+  cursor: pointer;
+}
+
+.contact{
+  position: relative;
+  min-height: 100vh;
+  padding: 50px 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+   
+}
+ .content{
+  max-width: 800px;
+  text-align: center;
+ }
+ .content h2{
+  font-size: 36px;
+  font-weight: 500;
+ }
+ .content p{
+  font-weight: 300;
+  font-size: 20px;
+  height: 70px;
+  text-align: center;
+  padding-top: 10px;
+  
+  
+
+ }
+ .container{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 40px;
+ 
+  
+ }
+ .contactinfo{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  
+ }
+ .box{
+  position: relative;
+  padding: 20px 0;
+  display: flex;
+ }
+ 
+ .text{
+  display: flex;
+  margin-left: 20px;
+  font-size: 16px;
+  flex-direction: column;
+  font-weight:300 ;
+  
+ }
+
+.icon {
+ width: 50px;
+  height: 50px;
+  background:#FF6C22;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-size: 22px;
+}
+.text h3{
+  font-weight:bold;
+  color:darkmagenta;
+}
+.text p {
+  font-weight: 500;
+}
+.contactform{
+  width: 40%;
+  padding: 40px;
+  background: #fff;
+}
+.contactform h2{
+  font-size: 30px;
+  color: #333;
+  font-weight: 500;
+  text-align: center;
+}
+.inputbox{
+  position: relative;
+  width: 100%;
+  margin-top: 10px;
+}
+.inputbox input,
+.inputbox textarea
+{
+width: 100%;
+padding: 5px 0;
+font-size: 16px;
+margin: 10px 0;
+border: none;
+border-bottom: 2px solid #333;
+outline: none;
+resize: none;
+}
+.inputbox button[type="submit"]{
+  width: 100px;
+  background:darkmagenta;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 18px;
+}
+
+.heading{
+    font-weight: 900;
+    color:darkred;
+    font-size:50px;
+    font-family:'Times New Roman', Times, serif;
+}
+.heading:hover{
+  font-size:51px ;
+  cursor: pointer;
+}
+.name{
+  padding-bottom: 2px;
+  text-align: center;
+}
+</style>
+<script language="JavaScript" type="text/javascript">
+	var val;
+    var exp;
+	 function hlight(ele){
+		ele.style.borderColor='deeppink'
+		}
+	 function RegExp1()
+  {
+val=window.document.forms.contact.name.value;
+     exp=/^[A-Za-z. ]{3,20}$/;
+    if(exp.test(val))
+    {
+    }
+    else
+    {
+      alert("please enter valid name");
+    }
+  }
+  function RegExp3()
+  {
+val=window.document.forms.contact.email.value;
+    exp= /^([a-zA-Z0-9_\.]+)@([a-zA-Z0-9_\.]+)\.([a-zA-Z]{2,5})$/;
+   var res = exp.test(val)
+    
+    if(!res)
+    {
+      alert("Please enter valid email ID");
+    }
+  }
+      function RegExp4()
+  {
+val=window.document.forms.contact.mobile.value;
+     exp=/^[7-9][0-9]{9}$/;
+    if(exp.test(val))
+    {
+    }
+    else
+    {
+      alert("please enter valid mob._no.");
+    }
+  }
+	</script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="menu">	
+                <div>
+              <li><a href="index.html">HOME</a></li>
+              <li><a href="gallery-home.html">GALLERY</a></li>
+              <li><a href="about.html" target="_blank">ABOUT</a></li>
+              <li><a href="contact.html">CONTACT</a></li>
+                </div>
+              
+            <div id="google_element" align="right"></div> 
+            <script>
+              function loadGoogleTranslate() {
+                new google.translate.TranslateElement('google_element');
+              }
+              </script>
+              </ul>
+          </nav>
+           <section class="contact">
+            <div class="name">
+              <u class="heading"><text class="heading">CONTACT US</text></u>
+              </div>
+            <div class="content">
+                <p>If you have any queries or any suggessions then you can send the message by using the following contact details. and if you want to give any feedback related to website then please fill the given form.</p>
+            </div>
+            <div class="container">
+                <div class="contactinfo">
+                    <div class="box">
+                        <div class="icon"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
+                        <div class="text">
+                            <h3>Address : </h3>
+                            <p>Sawkar Institute,<br>AGCE,Panmalewadi,<br>Satara,415110</p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="icon"><i class="fa fa-phone" aria-hidden="true"></i></div>
+                        <div class="text">
+                            <h3>Mobile : </h3>
+                            <p>9980985361</p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="icon"><i class="fa fa-envelope-o" aria-hidden="true"></i></div>
+                        <div class="text">
+                            <h3>Email : </h3>
+                            <p>exploresmaharashtraforts@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contactform">
+                  <h2><b>Feedback Form</b></h2>
+                  <form name="contact" action="contact1.php" method="POST">
+                    <div class="inputbox">
+                      <input type="text" id="name" name="name" required placeholder="Name" onblur="hlight(this)" required onchange="RegExp1()">
+                    </div>
+                    <div class="inputbox">
+                      <input type="email" id="email" name="email" required placeholder="Email" onblur="hlight(this)" required onchange="RegExp3()">
+                    </div>
+                    <div class="inputbox">
+                      <input type="mobile no." id="mobile" name="mobile" required placeholder="Mobile Number" onblur="hlight(this)" required onchange="RegExp4()">
+                    </div>
+                    <div class="inputbox">
+                      <textarea id="message" name="message" rows="1" required placeholder="Enter Your Message Here" onblur="hlight(this)"></textarea>
+                    </div>
+                    <div class="inputbox">
+                      <center><button type="submit" class="submit-button">Submit</button></center>
+                    </div>
+                    </form>
+                </div>
+                </div>
+                </section>
+      </header>
+</body>
+</html>

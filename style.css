@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Times New Roman', Times, serif;
+  }
+  
+  header {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.15)),
+      url("home_1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  nav 
+  #google_element {
+    width: 25%;
+    text-align: center;
+    border-radius: 15px;
+    float: right;
+    margin-top: -50px;
+    
+  }
+  
+  ul{
+    list-style: none;
+    background-color:#FF6C22 ;
+  }
+  ul li{
+    display:inline-block;
+    position: relative;
+    
+  }
+  ul li a{
+      display: block;
+      padding: 25px 25px;
+      color: white;
+      text-decoration: none;
+      text-align: center;
+      font-size: 20px;
+    font-weight: bold; 
+  }
+  ul.menu a:hover{
+    background-color:rgb(219, 71, 17);
+   }
+  main {
+    width: 100%;
+    height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+  }
+  
+  section h3 {
+    font-size: 35px;
+    font-weight: 200;
+    letter-spacing: 3px;
+    text-shadow: 1px 1px 2px black;
+  }
+  
+  section h1 {
+    margin: 30px 0 20px 0;
+    font-size: 55px;
+    font-weight: 700;
+    text-shadow: 2px 1px 5px black;
+    text-transform: uppercase;
+  }
+  
+  section p {
+    font-size: 25px;
+    word-spacing: 2px;
+    margin-bottom: 25px;
+    text-shadow: 1px 1px 1px black;
+  }
+  
+  section a {
+    padding: 12px 30px;
+    border-radius: 4px;
+    outline: none;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 500;
+    text-decoration: none;
+    letter-spacing: 1px;
+    transition: all 0.5s ease;
+  }
+  
+  section .btnone {
+    /*background: #00b894;*/
+    background:#FF5B22;
+    color:#22092C;
+    font-size: 30px;
+    font-weight:550;
+    border-radius: 15px;
+  }
+  
+  .btnone:hover {
+    background:firebrick;
+    color: #fff;
+    
+  }
+  
+  .change_content:after {
+    content: "";
+    animation: changetext 10s infinite linear;
+    color: #F05941;
+  }
+  
+  @keyframes changetext {
+    0% {
+      content: "Raigad Fort";
+      
+    }
+    10% {
+      content: "Pratapgad Fort";
+    }
+    22% {
+      content: "Sinhagad Fort";
+    }
+    33% {
+      content: "Murud-Janjira Fort";
+    }
+    44% {
+      content: "Daulatabad Fort";
+    }
+    55% {
+      content: "Shivneri Fort";
+    }
+    66% {
+      content: "Rajgad Fort";
+    }
+    78% {
+      content: "Sindhudurg Fort";
+    }
+    90% {
+      content: "Panhala Fort";
+    }
+    100% {
+      content: "Torna Fort";
+    } 
+  }
+
+
+  
