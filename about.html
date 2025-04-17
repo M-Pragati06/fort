@@ -17,37 +17,51 @@
     box-sizing: border-box;
     font-family:'Times New Roman', Times, serif;
   }
-  nav 
-  #google_element {
-    width: 25%;
-    text-align: center;
-    border-radius: 15px;
-    float: right;
-    margin-top: -50px;
-    
-  }
-  
-  ul{
-    list-style: none;
-    background-color:#FF6C22 ;
-  }
-  ul li{
-    display:inline-block;
-    position: relative;
-    
-  }
-  ul li a{
-      display: block;
-      padding: 25px 25px;
-      color: white;
-      text-decoration: none;
-      text-align: center;
-      font-size: 20px;
-    font-weight: bold; 
-  }
-  ul.menu a:hover{
-    background-color:rgb(219, 71, 17);
-   }
+  nav #google_element {
+            width: 100%;
+            max-width: 250px;
+            text-align: center;
+            border-radius: 15px;
+            margin: 10px auto;
+            float: none;
+        }
+        
+        .menu-toggle {
+            display: none;
+            cursor: pointer;
+            padding: 15px;
+            color: white;
+            font-size: 24px;
+            background-color: #FF6C22;
+            text-align: right;
+        }
+        
+        ul {
+            list-style: none;
+            background-color: #FF6C22;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        ul li {
+            display: inline-block;
+            position: relative;
+        }
+        
+        ul li a {
+            display: block;
+            padding: 20px 20px;
+            color: white;
+            text-decoration: none;
+            text-align: center;
+            font-size: clamp(16px, 2vw, 20px);
+            font-weight: bold;
+        }
+        
+        ul.menu a:hover {
+            background-color: rgb(219, 71, 17);
+        }
   body{
     background-image: linear-gradient(
   to right,
@@ -98,29 +112,79 @@
   span{
     font-family:  "Josefin Sans", sans-serif;;
   }
+
+  @media only screen and (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
+
+            .section{
+                padding: 10px;
+                text-align:justify;
+            }
+
+            .history{
+              margin-left: 0;
+            }
+
+          .paragraph{
+          padding-left: 0 !important;
+          margin-left: 0 !important;
+  }
+            
+            ul {
+                display: none;
+                flex-direction: column;
+            }
+            
+            ul.active {
+                display: flex;
+            }
+            
+            ul li {
+                width: 100%;
+            }
+            
+            #google_element {
+                float: none;
+                margin: 10px auto;
+                width: 80%;
+            }
+        }
   
     </style>
 </head>
 <body>
     <header>
-        <nav>
-            <ul class="menu">	
-                <div>
-              <li><a href="index.html">HOME</a></li>
-              <li><a href="gallery-home.html">GALLERY</a></li>
-              <li><a href="about.html" target="_blank">ABOUT</a></li>
-              <li><a href="contact.html">CONTACT</a></li>
-                </div>
-              
-            <div id="google_element" align="right"></div> 
+      <nav style="position: fixed; width: 100%; z-index: 1000;">
+        <div class="menu-toggle">☰</div>
+        <ul class="menu">    
+            <div>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="gallery-home.html">GALLERY</a></li>
+                <li><a href="about.html" target="_blank">ABOUT</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </div>
+            <div id="google_element"></div>
             <script>
-              function loadGoogleTranslate() {
-                new google.translate.TranslateElement('google_element');
-              }
-              </script>
-              </ul>
-          </nav>
-          <section class="section">
+                function loadGoogleTranslate() {
+                    new google.translate.TranslateElement('google_element');
+                }
+                
+                document.addEventListener('DOMContentLoaded', function() {
+                    const menuToggle = document.querySelector('.menu-toggle');
+                    const menu = document.querySelector('.menu');
+                    
+                    if (menuToggle && menu) {
+                        menuToggle.addEventListener('click', function() {
+                            menu.classList.toggle('active');
+                        });
+                    }
+                });
+            </script>
+        </ul>
+    </nav>
+          <section class="section" style="padding-top: 50px;">
             <div class="name">
             <u class="heading"><text class="heading">ABOUT</text></u>
             </div>
@@ -135,7 +199,7 @@
           <div class="history">
             <span style="font-size:50px; font-weight: 700; color:#FF6C22; margin-left: 10px; ">|</span><text style="color:darkmagenta; font-weight: 700; font-size: 35px;margin-left: 20px;font-family: 'Times New Roman', Times, serif; "><u style="font-family: 'Times New Roman', Times, serif;">Our Mission</u> :</text>
             <p class="paragraph" style="margin-top: 15px;">Our mission is to:</p><br>
-            <ol style="margin-left: 100px;font-size: 20px;">
+            <ol style="margin-left: 15px;font-size: 20px;">
                 <li style=" margin-top:5px;">Promote the appreciation and preservation of Maharashtra's forts</li><br>
                 <li>Provide comprehensive and informative resources for fort enthusiasts</li><br>
                 <li>Inspire people to explore and experience the unique history and culture of Maharashtra</li><br>

@@ -4,239 +4,424 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
-	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
-    <script  src="http://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate"></script>
-    
-
-
-    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="http://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate"></script>
+    <title>DAULATABAD FORT</title>
     <style>
         * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family:'Times New Roman', Times, serif;
-  }
-  nav {
-    width: 100%;
-    height: 10vh;
-    background-color:#FF6C22;
-    
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    text-transform: uppercase;
-  }
-  
-  nav 
-  #google_element {
-    width: 25%;
-    text-align: center;
-    border-radius: 15px;
-    /*background: red;*/
-  }
-  
-  nav .menu {
-    width: 40%;
-    display: flex;
-    justify-content:space-around;
-    
-  }
-  
-  nav .menu a {
-    width: 25%;
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    margin-left: 10px;
-  }
-  
-  nav .menu a:first-child {
-    padding-left: 20px;
-  }
-  body{
-    background-image: linear-gradient(
-  to right,
-  #C5FFF8 0%,
-  #5FBDFF 51%,
-  #C5FFF8 100%
-);
-  }
-.heading{
-    font-weight: 900;
-    color:darkred;
-    font-size:50px;
-    font-family:'Times New Roman', Times, serif;
-}
-.heading:hover{
-  font-size:51px ;
-  cursor: pointer;
-}
-.name{
-  padding-top: 50px;
-  padding-bottom: 50px;
-  text-align: center;
-}
-span{
-    font-family:  "Josefin Sans", sans-serif;;
-  }
-.img{
-    height:400px;
-    width:600px;
-    border-radius: 10px;
-    margin-left: 450px;
-    box-shadow: 20px 20px 50px 15px #183D3D;
-    margin-top: 50px;
-  }
-  .raigad-img{
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
-  }
-  .history{
-    margin-left: 20px;
-    padding-top: 30px;
-    font-family: 'Times New Roman', Times, serif;
-  }
-  .paragraph{
-    font-size: 20px;
-    padding-left: 45px;
-    font-family: 'Times New Roman', Times, serif;
-  }
+            margin: 0;
+            padding: 0;
+            text-align: justify;
+            box-sizing: border-box;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        
+        body {
+            background-image: linear-gradient(
+                to right,
+                #C5FFF8 0%,
+                #5FBDFF 51%,
+                #C5FFF8 100%
+            );
+        }
+        
+        nav {
+            width: 100%;
+            height: auto;
+            min-height: 10vh;
+            background-color: #FF6C22;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            text-transform: uppercase;
+            padding: 10px 20px;
+            position: relative;
+        }
+        
+        #google_element {
+            width: 100%;
+            max-width: 300px;
+            text-align: center;
+            border-radius: 15px;
+            margin: 10px 0;
+        }
+        
+        nav .menu {
+            width: 100%;
+            max-width: 500px;
+            display: flex;
+            margin: 10px 0;
+        }
+        
+        nav .menu a {
+            padding: 10px;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            margin: 5px;
+            text-align: center;
+        }
+        
+        .heading {
+            font-weight: 900;
+            color: darkred;
+            font-size: 2.5rem;
+            font-family: 'Times New Roman', Times, serif;
+            transition: all 0.3s ease;
+        }
+        
+        .heading:hover {
+            transform: scale(1.02);
+            cursor: pointer;
+        }
+        
+        .name {
+            padding: 30px 20px;
+            text-align: center;
+        }
+        
+        span {
+            font-family: "Josefin Sans", sans-serif;
+        }
+        
+        .img {
+            max-width: 90%;
+            height: auto;
+            border-radius: 10px;
+            margin: 30px auto;
+            box-shadow: 10px 10px 30px 10px #183D3D;
+            display: block;
+        }
+        
+        .raigad-img {
+            width: 100%;
+            height: 400px;
+            border-radius: 10px;
+        }
+        
+        .history {
+            margin: 0 20px;
+            padding-top: 20px;
+        }
 
+        .history ul{
+            margin-left: 100px;
+        }
+        
+        .paragraph {
+            font-size: 1rem;
+            padding: 10px 20px;
+            line-height: 1.6;
+        }
+        
+        .map_info {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 0;
+        }
+        
+        .map {
+            width: 90%;
+            max-width: 600px;
+            height: 300px;
+            border: 0;
+            margin: 20px auto;
+        }
+        
+        .main_map {
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+        }
+        
+        ul a {
+            font-family: 'Times New Roman', Times, serif;
+            text-decoration: none;
+            color: mediumblue;
+            word-break: break-all;
+        }
+        
+        ul {
+            margin: 20px;
+            padding-left: 20px;
+        }
+        
+        li {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+        
+        .map_list {
+            width: 90%;
+            max-width: 800px;
+            margin: 0 auto;
+        }
 
-  .map_info{
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-top: 40px;
-  }
-  .map{
-    width:400px;
-    height:300px;
-    border: 0;
-    
-    
-  }
-  .main_map{
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
-  }
+        .map_list ul{
+            margin-left: 150px;
+        }
+        
+        .map_list h2 {
+            text-align: center;
+            font-family: 'Times New Roman', Times, serif;
+            color: darkmagenta;
+            margin: 20px 0;
+            font-size: 1.5rem;
+        }
 
-  ul a{
-    font-family: 'Times New Roman', Times, serif;
-    text-decoration:none;
-  }
-  
+        /* Toggle button styles */
+        .menu-toggle {
+            display: none;
+            cursor: pointer;
+            color: white;
+            font-size: 24px;
+            padding: 10px;
+        }
+
+        /* Media Queries for different screen sizes */
+        @media (min-width: 768px) {
+            nav {
+                padding: 0 30px;
+                height: 10vh;
+            }
+
+            nav .menu {
+                width: 50%;
+                margin: 0;
+            }
+            
+            #google_element {
+                width: 30%;
+                margin: 0;
+            }
+            
+            .heading {
+                font-size: 3rem;
+            }
+            
+            .paragraph {
+                font-size: 1.1rem;
+                padding: 10px 40px;
+            }
+            
+            .img {
+                max-width: 70%; 
+            }
+
+            .map_info {
+                flex-direction: row;
+                align-items: flex-start;
+                padding: 40px 20px;
+            }
+            
+            .map {
+                width: 45%;
+                margin: 0 20px;
+            }
+            
+            .map_list {
+                width: 45%;
+                margin: 0 20px;
+            }
+            
+            .map_list h2 {
+                text-align: left;
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            .img {
+                max-width: 600px;
+            }
+
+            .paragraph {
+                font-size: 1.2rem;
+                padding: 10px 60px;
+            }
+            
+            .heading {
+                font-size: 3.5rem;
+            }
+        }
+        
+        @media (max-width: 767px) {
+            .heading {
+                font-size: 2rem;
+            }
+
+            .history ul{
+                margin-left: 0 !important;
+            }
+
+            .history ul li{
+                font-size: 1rem;
+            }
+
+            .map_list ul{
+                margin-left: 10px;
+            }
+
+            .raigad-img {
+                height: 300px;
+            }
+            
+            nav .menu a {
+                width: 100%;
+                margin: 5px 0;
+            }
+            
+            .history span {
+                font-size: 2rem;
+            }
+            
+            .history text {
+                font-size: 1.5rem;
+            }
+
+            /* Mobile menu styles */
+            .menu-toggle {
+                display: block;
+            }
+
+            nav{
+                justify-content: end;
+            }
+
+            nav .menu {
+                display: none;
+                width: 100%;
+                flex-direction: column;
+            }
+
+            nav .menu.active {
+                display: flex;
+            }
+
+            #google_element {
+                display: none;
+                width: 100%;
+            }
+
+            #google_element.active {
+                display: block;
+            }
+        }
     </style>
 </head>
 <body>
     <header>
-        <nav>	
-            <div class="menu">
-              <a href="index.html">Home</a>
-              <a href="information.html">Go back</a>
-              
+        <nav style="position: fixed; width: 100%; z-index: 1000;">    
+            <div class="menu-toggle" id="mobile-menu">
+                <i class="fas fa-bars"></i>
             </div>
-              
+            
+            <div class="menu" id="nav-menu">
+                <a href="index.html">Home</a>
+                <a href="information.html">Go back</a>
+            </div>
+                
             <div id="google_element" align="right"></div> 
         <script>
             function loadGoogleTranslate() {
-              new google.translate.TranslateElement('google_element');
+                new google.translate.TranslateElement('google_element');
             }
-            </script>
-              
-          </nav>
-          <section class="section">
+
+            // Toggle menu function
+            document.getElementById('mobile-menu').addEventListener('click', function() {
+                const menu = document.getElementById('nav-menu');
+                const googleElement = document.getElementById('google_element');
+                
+                menu.classList.toggle('active');
+                googleElement.classList.toggle('active');
+            });
+        </script>
+        </nav>
+        <section class="section" style="padding-top: 70px;">
             <div class="name">
-            <u class="heading"><text class="heading">DAULATABAD FORT</text></u>
+                <u class="heading"><text class="heading">DAULATABAD FORT</text></u>
             </div>
             
-          <div class="history">
-            <span style="font-size:50px; font-weight: 700; color:#FF6C22; margin-left: 10px; ">|</span><text style="color: darkred; font-weight: 700; font-size: 35px;margin-left: 20px; font-family: 'Times New Roman', Times, serif; "><u style="font-family: 'Times New Roman', Times, serif;">Information</u> :</text>
-            <p class="paragraph" style="margin-top: 5px;">Raigad Fort belonging to Chhatrapati Shivaji Maharaj is an imposing and famous hill fort nestled at Mahad, in Raigad District in Maharashtra. It is one of the strongest-ever fortresses of the Deccan Plateau and is known as the ‘Gibraltar of the East’ across the world. Several structures and other constructions in Raigad were developed by Chhatrapati Shivaji Maharaj. He made this his capital in 1674, after being crowned as the king of the entire Maratha Kingdom and later on, the Maratha Empire, covering a large portion of the central and western parts of India. The fort was the location for an armed campaign executed by the British East India Company in 1765. On May 9, 1818, the fort was looted and subsequently destroyed by British forces.</p><br>
-            <p class="paragraph">It is nearly-impossible to estimate the accurate value of the Raigad Fort, one of India’s stunning landmarks and a witness to historic events and stories of legendary warriors. It goes 2,700 ft or 820 metres above sea level, with the beautiful Sahyadri mountain range as the backdrop.</p><br>
-            <p class="paragraph">Raigad Fort belonging to Chhatrapati Shivaji Maharaj includes little gateways namely Mena Darwaja, Palkhi Darwaja, Nagarkhana Darwaja and Maha Darwaja which elevate the enchantment levels here and show a glimpse of how people used to access the fort back in those days. While it held great grounds in the olden days, even today the Raigad fort sees a lot of tourists and local crowds who come here for activities including picnic, trekking and enjoying nature and its elements.</p><br>
-            <p class="paragraph" style="margin-bottom: 50px;">There is a single pathway with close to 1,737 steps leading to the Raigad Fort. The Raigad Ropeway is an aerial tramway that spans 750 metres in length and is 400 metres high. This helps tourists reach the Raigad Fort from the ground level in only a few minutes. The value of this Fort is priceless just like all other iconic monuments in the country. If it were to be estimated today, it would run into several millions without a doubt!</p>
-          </div>
-          <div class="img">
-            <img class="raigad-img" src="daultabad/Daulatabad_12.webp" alt="daultabad-fort">
-          </div>
-          
-          <div class="history">
-            <span style="font-size:50px; font-weight: 700; color:#FF6C22; margin-left: 10px; ">|</span><text style="color: darkred; font-weight: 700; font-size: 35px;margin-left: 20px;font-family: 'Times New Roman', Times, serif; "><u style="font-family: 'Times New Roman', Times, serif;">History and local lore</u> :</text>
-            <p class="paragraph" style="margin-top: 5px;">The Raigad Fort (earlier called as the Fort of Rairi) was seized by Chhatrapati Shivaji Maharaj in 1656 from Chandraraoji More, the King of Jawali. After Chhatrapati Shivaji Maharaj seized the fort, he expanded it considerably and named it as King’s Fort or Raigad. It later became the capital of Chhatrapati Shivaji Maharaj’s expanding Maratha Empire. The Raigadwadi and Pachad villages are nestled at the base of the fort. These villages were vital during the Maratha reign at the Raigad Fort. The climb till the top of the fort starts right from Pachad itself. During the rule of Chhatrapati Shivaji Maharaj , a 10,000-strong cavalry division was always on guard at the Pachad village. Shivaji also built the Lingana Fort approximately two miles away from Raigad. It was used for accommodating prisoners.</p><br>
-            <p class="paragraph" style="margin-bottom: 20px;">Zulfikhar Khan captured Raigad in 1689 and Aurangzeb changed its name to Islamgad. Siddi Fathekan captured the fort in 1707 and held it until 1733. After this period, the Marathas captured the Raigad Fort once again and kept it till 1818. The Fort is nestled in the current Sindhudurg District of Maharashtra and the British East India Company targeted it as a major political epicenter. Cannons from the hill of Kalkai ravaged the Raigad Fort in 1818, destroying it. On May 9, 1818, a treaty was executed and the British East India Company obtained control of the same.</p>
+            <div class="history">
+                <span style="font-size:50px; font-weight: 700; color:#FF6C22; margin-left: 10px; ">|</span><text style="color: darkred; font-weight: 700; font-size: 35px;margin-left: 20px; font-family: 'Times New Roman', Times, serif; "><u style="font-family: 'Times New Roman', Times, serif;">Information</u> :</text>
+                <p class="paragraph" style="margin-top: 5px;">Daulatabad Fort, originally known as Devagiri Fort, is a magnificent 14th-century fort situated in Maharashtra. It stands on a conical hill about 200 meters high, making it one of the most powerful forts of its time. The fort's strategic location and impressive defenses made it virtually impregnable for centuries.</p><br>
+                <p class="paragraph">The fort complex includes several notable structures spread over approximately 94 hectares. It was the capital of the Yadava dynasty and later the Tughlaq dynasty. The fort is renowned for its ingenious defense mechanisms, including a complex series of entrances designed to confuse attackers, and a steep, smooth slope to prevent elephant charges.</p><br>
+                <p class="paragraph">Daulatabad Fort is particularly famous for its brilliant defense architecture. The fort has a 5 km long wall, and the moat around the fort was once filled with crocodiles. The Chand Minar, a 30-meter high tower, stands as a testament to the fort's glorious past and serves as a watchtower.</p><br>
+                <p class="paragraph" style="margin-bottom: 50px;">The fort's most remarkable feature is its defense system which includes a series of secret escape routes, false doorways, and a complicated maze-like pathway to the top. The fort never fell to siege, and was only captured through treachery or abandonment.</p>
             </div>
             <div class="img">
-              <img class="raigad-img" src="daultabad/Daulatabad_4.JPG" alt="daultabad-fort">
+                <img class="raigad-img" src="daultabad/Daulatabad_12.webp" alt="daulatabad-fort">
             </div>
+            
             <div class="history">
-              <span style="font-size:50px; font-weight: 700; color:#FF6C22; margin-left: 10px; ">|</span><text style="color: darkred; font-weight: 700; font-size: 35px;margin-left: 20px; font-family: 'Times New Roman', Times, serif; "><u style="font-family: 'Times New Roman', Times, serif;">Things to look out</u> :</text>
-              <p class="paragraph" style="margin-top: 5px;">Raigad fort is a big tourist destination in Maharashtra that has an excellent combination of history and nature coexisting. Let’s look at what all visitors should look out for while going to see Maratha Empire’s Raigad Fort.</p><br>
-              <ul style="margin-left: 100px;font-size: 20px;">
-              <li style="font-family: 'Times New Roman', Times, serif;"><b style="font-family: 'Times New Roman', Times, serif;">Raigad Fort Entry:</b> The Chit Darwaza is from where visitors enter the Raigad Fort. From here visitors have to go to the Khoob Ladha Buruj and then move to the Raigad Fort’s main entrance- Maha Darwaja. This is extremely huge with the glory of the Maratha empire carved on it. From here, one has to trek up and will see all the little gateways mentioned above on their way. The sole pathway to the Raigad Fort goes through the ‘Huge Door’ or ‘Maha Darwaja’ which was earlier closed at sunset. It has two massive bastions on both sides, going up to 65-70 ft in height. The top of the Raigad Fort is approximately 600 ft above the door.</li><br>
-              <li style="font-family: 'Times New Roman', Times, serif;"><b style="font-family: 'Times New Roman', Times, serif;"> Rani Vasa:</b> While going to Raigad fort, do check out the Rani Vasa or the queen’s chamber, whose structure is still intact. Raigad Fort information mentions that this was actually used by Shivaji Maharaj’s mother and other royal ladies.</li><br>
-              <li style="font-family: 'Times New Roman', Times, serif;"><b style="font-family: 'Times New Roman', Times, serif;">Palkhi Darwaja: </b>This lies just ahead of the Rani Vasa. This was the place where Shivaji Maharaj used to pass along with his convoy. On the right if the Palkhi Darwaja were rooms which were actually believed to be the fort’s granaries.</li><br>
-              <li style="font-family: 'Times New Roman', Times, serif;"><b style="font-family: 'Times New Roman', Times, serif;">The Royal Bath: </b>It has its own magnificent drainage system that has impressed historians and architecture lovers greatly. It leads to an underground cellar, which was used for secretive activities in the past including storing treasures garnered from wars, secret conversations and prayers and so on.</li> <br>
-              <li style="font-family: 'Times New Roman', Times, serif;"><b style="font-family: 'Times New Roman', Times, serif;">Raj Bhavan:</b> A pious place, this is believed to be the main place where Chhatrapati Shivaji Maharaj used to spend time. This place has seen it all- victory, defeat, happiness, sadness, etc. historians mention.</li><br>
-              <li style="font-family: 'Times New Roman', Times, serif;"><b style="font-family: 'Times New Roman', Times, serif;"> Watchtowers:</b> The fort was guarded by three watchtowers. While two are still standing tall, the third one was attacked by the British and destroyed.</li>
+                <span style="font-size:50px; font-weight: 700; color:#FF6C22; margin-left: 10px; ">|</span><text style="color: darkred; font-weight: 700; font-size: 35px;margin-left: 20px;font-family: 'Times New Roman', Times, serif; "><u style="font-family: 'Times New Roman', Times, serif;">History and local lore</u> :</text>
+                <p class="paragraph" style="margin-top: 5px;">The fort was built in 1187 by the Yadava king Bhillama V. In 1296, it was captured by Ala-ud-din Khilji, and later became the capital of the Tughlaq dynasty under Muhammad bin Tughluq in 1327. The sultan renamed it Daulatabad ("City of Prosperity") and forcibly moved the entire population of Delhi here, though the capital was shifted back to Delhi two years later.</p><br>
+                <p class="paragraph" style="margin-bottom: 20px;">The fort changed hands several times between the Bahmani Sultanate, the Nizam Shahis of Ahmadnagar, the Mughals, and the Marathas. Chhatrapati Shivaji Maharaj captured it in 1653 but it was later taken by the Mughal emperor Aurangzeb. The Nizam of Hyderabad held it until it came under Indian control after independence.</p>
             </div>
             <div class="img">
-              <img  class="raigad-img" src="daultabad/Daulatabad_15.jpg" alt="daultabad-fort">
+                <img class="raigad-img" src="daultabad/Daulatabad_4.JPG" alt="daulatabad-fort">
             </div>
             <div class="history">
-              <span style="font-size:50px; font-weight: 700; color:#FF6C22; margin-left: 10px; ">|</span><text style="color: darkred; font-weight: 700; font-size: 35px;margin-left: 20px; font-family: 'Times New Roman', Times, serif; "><u style="font-family: 'Times New Roman', Times, serif;">Key facts</u> :</text>
-              <ul style="margin-left: 100px;font-size: 20px;">
-              <li style="font-family: 'Times New Roman', Times, serif; margin-top:5px;"> Raigad Fort was built by Chhatrapati Shivaji Maharaj.</li><br>
-              <li style="font-family: 'Times New Roman', Times, serif;"> The chief architect and engineer was none other than Hiroji Indulkar.</li><br>
-              <li style="font-family: 'Times New Roman', Times, serif;">The main fort has the queen’s quarters, private restrooms and six chambers in all.</li><br>
-              <li style="font-family: 'Times New Roman', Times, serif;">There are ruins of a market, which was accessed by horseback riders once</li> <br>
-              <li style="font-family: 'Times New Roman', Times, serif;">The King’s Darbar still contains a replica of the original throne, which faces the ‘Nagarkhana Darwaja’ or main doorway. This enclosure was acoustically tailored to help hearing right from the doorway till the throne itself.</li><br>
-              <li style="font-family: 'Times New Roman', Times, serif;">‘Takmak Tok’ is the execution point and cliff from where prisoners were thrown to die. The area is fenced-off today.</li><br>
-              </div>
+                <span style="font-size:50px; font-weight: 700; color:#FF6C22; margin-left: 10px; ">|</span><text style="color: darkred; font-weight: 700; font-size: 35px;margin-left: 20px; font-family: 'Times New Roman', Times, serif; "><u style="font-family: 'Times New Roman', Times, serif;">Things to look out</u> :</text>
+                <p class="paragraph" style="margin-top: 5px;">Daulatabad Fort is an architectural marvel with several unique features that visitors should not miss:</p><br>
+                <ul style="margin-left: 100px;font-size: 20px;">
+                <li style="font-family: 'Times New Roman', Times, serif;"><b style="font-family: 'Times New Roman', Times, serif;">The Defense System:</b> The fort's brilliant defense mechanisms include a complicated series of entrances, false gates, and a steep, smooth slope designed to prevent elephant charges.</li><br>
+                <li style="font-family: 'Times New Roman', Times, serif;"><b style="font-family: 'Times New Roman', Times, serif;">Chand Minar:</b> This 30-meter high tower built in 1445 by Ala-ud-din Bahmani served as a victory tower and a watchtower.</li><br>
+                <li style="font-family: 'Times New Roman', Times, serif;"><b style="font-family: 'Times New Roman', Times, serif;">The Dark Passage:</b> A pitch-dark, zigzagging tunnel designed to confuse invaders, now lit with electric lights for visitors.</li><br>
+                <li style="font-family: 'Times New Roman', Times, serif;"><b style="font-family: 'Times New Roman', Times, serif;">Baradari:</b> The remains of the royal palace with twelve doors, offering panoramic views of the surrounding area.</li><br>
+                <li style="font-family: 'Times New Roman', Times, serif;"><b style="font-family: 'Times New Roman', Times, serif;">Hathi Haud:</b> A massive water tank that could hold 10,000 cubic meters of water, used to supply the fort during sieges.</li><br>
+                <li style="font-family: 'Times New Roman', Times, serif;"><b style="font-family: 'Times New Roman', Times, serif;">Cannon Fortifications:</b> Several ancient cannons still positioned along the fort walls, including the famous 'Daulatabad Cannon'.</li>
+            </div>
+            <div class="img">
+                <img  class="raigad-img" src="daultabad/Daulatabad_15.jpg" alt="daulatabad-fort">
+            </div>
+            <div class="history">
+                <span style="font-size:50px; font-weight: 700; color:#FF6C22; margin-left: 10px; ">|</span><text style="color: darkred; font-weight: 700; font-size: 35px;margin-left: 20px; font-family: 'Times New Roman', Times, serif; "><u style="font-family: 'Times New Roman', Times, serif;">Key facts</u> :</text>
+                <ul style="margin-left: 100px;font-size: 20px;">
+                <li style="font-family: 'Times New Roman', Times, serif; margin-top:5px;"> Built in 1187 by the Yadava king Bhillama V</li><br>
+                <li style="font-family: 'Times New Roman', Times, serif;"> Originally named Devagiri ("Hill of Gods")</li><br>
+                <li style="font-family: 'Times New Roman', Times, serif;">Renamed Daulatabad ("City of Prosperity") by Muhammad bin Tughluq in 1327</li><br>
+                <li style="font-family: 'Times New Roman', Times, serif;">The fort walls extend approximately 5 km in circumference</li><br>
+                <li style="font-family: 'Times New Roman', Times, serif;">The fort stands on a 200-meter high conical hill</li><br>
+                <li style="font-family: 'Times New Roman', Times, serif;">Never conquered by force, only through treachery or abandonment</li><br>
+                </div>
 
-              <div class="history">
-                <span style="font-size:50px; font-weight: 700; color:#FF6C22; margin-left: 10px; ">|</span><text style="color: darkred; font-weight: 700; font-size: 35px;margin-left: 20px; font-family: 'Times New Roman', Times, serif; "><u style="font-family: 'Times New Roman', Times, serif;">Nearby places</u> :</text>
-                <p class="paragraph" style="margin-top: 5px;">Raigad Fort can never be complete without talking about other attractions that are neighbours to the Raigad Fort</p><br>
-                <div class="img">
-                  <img  class="raigad-img" src="daultabad/Daulatabad_7.jpg" alt="daultabad-fort">
-                </div>
-                <ul style="margin-left: 100px;font-size: 20px;margin-top: 50px;">
-                <li style="font-family: 'Times New Roman', Times, serif; margin-top:5px;"><b style="font-family: 'Times New Roman', Times, serif;">Gangasagar Lake: </b> This artificial lake is special because it was created during the coronation of Chhatrapati Shivaji Maharaj. The fort overlooks the Ganga Sagar artificial lake.</li><br>
-                <li style="font-family: 'Times New Roman', Times, serif;"><b style="font-family: 'Times New Roman', Times, serif;">Jijamata Palace: </b>Conserved by the archaeological survey of India, this was the palace of Jijamata, the mother of Chhatrapati Shivaji Maharaj, where millions come to pay their respects</li><br>
-                <li style="font-family: 'Times New Roman', Times, serif;"><b style="font-family: 'Times New Roman', Times, serif;">Jagadishwar Temple: </b>An ardent devotee of Lord Jagadishwar of, this temple was built by Chhatrapati Shivaji Maharaj..</li><br>
-                <li style="font-family: 'Times New Roman', Times, serif;"><b style="font-family: 'Times New Roman', Times, serif;">Raigad Museum:</b>This showcases the artefacts, paintings, weapons and many other things dating back to the days of Maratha empire.</li> 
-                </ul><br>
-                </div>
-                
                 <div class="history">
-                  <span style="font-size:50px; font-weight: 700; color:#FF6C22; margin-left: 10px; ">|</span><text style="color: darkred; font-weight: 700; font-size: 35px;margin-left: 20px; font-family: 'Times New Roman', Times, serif; "><u style="font-family: 'Times New Roman', Times, serif;">Fort Map and Famous Hotels</u> :</text>
-                </div>
-                <div class="map_info">
-                  <div class="map">
-                  <iframe class="main_map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3789.4828135755124!2d73.43582037790854!3d18.233675433562667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be8283eb38b1ce5%3A0xfc31826ad34a5b70!2sRaigad%20Fort!5e0!3m2!1sen!2sin!4v1701454427188!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></iframe> 
-                  </div>
-                  <div class="map_list">
-                    <h2 style="text-align:right; font-family: 'Times New Roman', Times, serif; color: darkmagenta;">Famous Hotels Near By Raigad Fort</h2>
-                    <ul style="margin-left: 150px;font-size: 20px;margin-top: 30px;">
-                      <li style="margin-top:5px;" ><a href="https://www.google.com/maps/place/%E0%A4%B9%E0%A5%89%E0%A4%9F%E0%A5%87%E0%A4%B2+%E0%A4%B8%E0%A4%BE%E0%A4%88+%E0%A4%95%E0%A5%83%E0%A4%AA%E0%A4%BE+%26+%E0%A4%B2%E0%A5%89%E0%A4%9C%E0%A5%80%E0%A4%97/data=!4m7!3m6!1s0x3be8297f03474823:0x80d049d822695a9f!8m2!3d18.2296188!4d73.4361625!16s%2Fg%2F11rd32qd5m!19sChIJI0hHA38p6DsRn1ppIthJ0IA?authuser=0&hl=en&rclk=1"><text style="color:mediumblue;">Hotel saikrupa and lodging</text></a></li><br>
-                      <li style="margin-top:5px;"><a href="https://www.google.com/maps/place/Swarajy+nivas/data=!4m7!3m6!1s0x3be8294353fd1d1d:0x29e7377a51a596d3!8m2!3d18.2313754!4d73.4331104!16s%2Fg%2F11n5qn9hj1!19sChIJHR39U0Mp6DsR05alUXo35yk?authuser=0&hl=en&rclk=1"><text style="color:mediumblue">Swarajy Nivas</text></a></li><br>
-                      <li style="margin-top:5px;"><a href="https://www.google.com/maps/place/%E0%A4%B0%E0%A4%BE%E0%A4%AF%E0%A4%97%E0%A4%A1+%E0%A4%89%E0%A4%AA%E0%A4%B9%E0%A4%BE%E0%A4%B0%E0%A4%97%E0%A5%83%E0%A4%B9/data=!4m7!3m6!1s0x3be829b6aa7f9991:0x1e1a23c1ebd7041b!8m2!3d18.2290227!4d73.4364268!16s%2Fg%2F11rn6dqdt7!19sChIJkZl_qrYp6DsRGwTX68EjGh4?authuser=0&hl=en&rclk=1"><text style="color:mediumblue">Raigad Upahargruh</text></a></li><br>
-                      <li style="margin-top:5px;"><a href="https://www.google.com/maps/place/hotel+sai+prasad+water+tanks/data=!4m7!3m6!1s0x3be82987edee0be1:0xdd5132d25aa2f86a!8m2!3d18.2325652!4d73.4315673!16s%2Fg%2F11v0x891ng!19sChIJ4Qvu7Ycp6DsRaviiWtIyUd0?authuser=0&hl=en&rclk=1"><text style="color:mediumblue">Hotel sai prasad water tanks</text></a></li><br>
-                      <li style="margin-top:5px;"><a href="https://www.google.com/maps/place/Davale+bnglow/data=!4m7!3m6!1s0x3be829b499108757:0xd81fd8d703cc40d1!8m2!3d18.2378153!4d73.4182445!16s%2Fg%2F11jffzb8n4!19sChIJV4cQmbQp6DsR0UDMA9fYH9g?authuser=0&hl=en&rclk=1"><text style="color:mediumblue">Dawale Bnglow</text></a></li><br>
-                      <li style="margin-top:5px;"><a href="https://www.google.com/maps/place/Hotel+showrya/data=!4m7!3m6!1s0x3be8299a912f725b:0x240405cfe8a93cf2!8m2!3d18.2361966!4d73.420231!16s%2Fg%2F11trn84rt5!19sChIJW3IvkZop6DsR8jyp6M8FBCQ?authuser=0&hl=en&rclk=1"><text style="color:mediumblue">Hotel Showrya</text></a></li><br>
-                      <li style="margin-top:5px;"><a href="https://www.google.com/maps/place/Hotel+Raigad/data=!4m7!3m6!1s0x3be82b48165b1c0f:0xe56ceb53db4d89a2!8m2!3d18.1620441!4d73.4418917!16s%2Fg%2F11pz03lx16!19sChIJDxxbFkgr6DsRoolN21PrbOU?authuser=0&hl=en&rclk=1"><text style="color:mediumblue">Hotel Raigad</text></a></li><br>
-                      <li style="margin-top:5px;"><a href="https://www.google.com/maps/place/Hotel+Nishant/data=!4m7!3m6!1s0x3be82dd5ae7c4645:0x3543725912e8314f!8m2!3d18.1580786!4d73.3201924!16s%2Fg%2F11g87bvwjw!19sChIJRUZ8rtUt6DsRTzHoEllyQzU?authuser=0&hl=en&rclk=1"><text style="color:mediumblue">Hotel Nishant</text></a></li><br>
-                      <li style="margin-top:5px;"><a href="https://www.google.com/maps/place/Ayush+Hotel+and+loging/data=!4m10!3m9!1s0x3be8294ebab10d8d:0x5c9e58abaa55244e!5m2!4m1!1i2!8m2!3d18.228806!4d73.4364315!16s%2Fg%2F11mb4qhjkr!19sChIJjQ2xuk4p6DsRTiRVqqtYnlw?authuser=0&hl=en&rclk=1"><text style="color:mediumblue">Aayush hotel and lodging</text></a></li><br>
-                      <li style="margin-top:5px;"><a href="https://www.google.com/maps/place/OYO+HOME+85312+Manshanti+Cottage/data=!4m10!3m9!1s0x3be8274e46a50341:0x4bc8cad096b6381!5m2!4m1!1i2!8m2!3d18.264407!4d73.413337!16s%2Fg%2F11sg_j52q0!19sChIJQQOlRk4n6DsRgWNrCa2MvAQ?authuser=0&hl=en&rclk=1"><text style="color:mediumblue">OYO Home 85312 Manshanti Cottage</text></a></li>
-                    </ul><br><br><br><br><br>
-                  </div>
-                  </div>
-
-
+                    <span style="font-size:50px; font-weight: 700; color:#FF6C22; margin-left: 10px; ">|</span><text style="color: darkred; font-weight: 700; font-size: 35px;margin-left: 20px; font-family: 'Times New Roman', Times, serif; "><u style="font-family: 'Times New Roman', Times, serif;">Nearby places</u> :</text>
+                    <p class="paragraph" style="margin-top: 5px;">While visiting Daulatabad Fort, consider exploring these nearby attractions:</p><br>
+                    <div class="img">
+                        <img  class="raigad-img" src="daultabad/Daulatabad_7.jpg" alt="daulatabad-fort">
+                    </div>
+                    <ul style="margin-left: 100px;font-size: 20px;margin-top: 50px;">
+                    <li style="font-family: 'Times New Roman', Times, serif; margin-top:5px;"><b style="font-family: 'Times New Roman', Times, serif;">Ellora Caves:</b> Just 15 km away, these UNESCO World Heritage rock-cut temples date from 600-1000 CE and represent Buddhist, Hindu and Jain traditions.</li><br>
+                    <li style="font-family: 'Times New Roman', Times, serif;"><b style="font-family: 'Times New Roman', Times, serif;">Bibi Ka Maqbara:</b> Located in Aurangabad (13 km away), this 17th century tomb is often called the "Poor Man's Taj Mahal".</li><br>
+                    <li style="font-family: 'Times New Roman', Times, serif;"><b style="font-family: 'Times New Roman', Times, serif;">Aurangabad Caves:</b> About 15 km from the fort, these 6th-7th century Buddhist caves feature beautiful sculptures.</li><br>
+                    <li style="font-family: 'Times New Roman', Times, serif;"><b style="font-family: 'Times New Roman', Times, serif;">Grishneshwar Temple:</b> One of the 12 Jyotirlingas, this important Shiva temple is located 30 km from the fort.</li><br>
+                    </div>
+                    
+                    <div class="history">
+                        <span style="font-size:50px; font-weight: 700; color:#FF6C22; margin-left: 10px; ">|</span><text style="color: darkred; font-weight: 700; font-size: 35px;margin-left: 20px; font-family: 'Times New Roman', Times, serif; "><u style="font-family: 'Times New Roman', Times, serif;">Fort Map and Famous Hotels</u> :</text>
+                    </div>
+                    <div class="map_info">
+                        <div class="map">
+                            <iframe class="main_map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3752.381418719397!2d75.21018531535353!3d19.94245542866386!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bdb9816a89f0e91%3A0x6d5f394a7c1bccda!2sDaulatabad%20Fort!5e0!3m2!1sen!2sin!4v1701593211760!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                        <div class="map_list">
+                            <h2 style="text-align:center; font-family: 'Times New Roman', Times, serif; color: darkmagenta;">Famous Hotels Near Daulatabad Fort</h2>
+                            <ul style="font-size: 20px;margin-top: 30px;">
+                                <li style="margin-top:5px;"><a href="https://maps.app.goo.gl/g7zLHyizsZCfWn5y6"><text style="color:mediumblue;">Lemon Tree Hotel, Aurangabad</text></a></li><br>
+                                <li style="margin-top:5px;"><a href="https://maps.app.goo.gl/H8zS2RpoaqvYrK1Z8"><text style="color:mediumblue">The Meadows Resort & Spa</text></a></li><br>
+                                <li style="margin-top:5px;"><a href="https://maps.app.goo.gl/J76PNJbjn8XA49Ky8"><text style="color:mediumblue">Vivanta Aurangabad</text></a></li><br>
+                                <li style="margin-top:5px;"><a href="https://maps.app.goo.gl/2y7Pjogj6yP5MJUW7"><text style="color:mediumblue">Hotel Atithi</text></a></li><br>
+                                <li style="margin-top:5px;"><a href="https://maps.app.goo.gl/h2yGCUTcxEjD4Ujs8"><text style="color:mediumblue">Rama International</text></a></li><br>
+                                <li style="margin-top:5px;"><a href="https://maps.app.goo.gl/uZ31WH2b93JcKpX37"><text style="color:mediumblue">Hotel Panchavati</text></a></li><br>
+                            </ul>
+                        </div>
+                    </div>
                 </section>
     </header>
 </body>

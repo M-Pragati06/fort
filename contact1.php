@@ -6,7 +6,7 @@ $message= $_POST['message'];
 
 //Database connection
 
-$conn = new mysqli('localhost','root','','explores_maharashtra_forts');
+$conn = new mysqli('localhost','root','','exploring_maharashtra_forts');
 if($conn->connect_error){
 	die('Connection Failed : '.$conn->connect_error);
 }

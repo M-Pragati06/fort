@@ -1,127 +1,350 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
-	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
-    <script  src="http://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate"></script>
-    
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <script  src="http://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate"></script>
+  
 
 
-    <title>Document</title>
-    <style>
-        * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Josefin Sans", sans-serif;
-  }
-  nav {
-    width: 100%;
-    height: 10vh;
-    background-color:#FF6C22;
+  <title>Torna-Fort</title>
+  <style>
+    * {
+        margin: 0;
+        padding: 0;
+        text-align: justify;
+        box-sizing: border-box;
+        font-family: 'Times New Roman', Times, serif;
+    }
     
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    text-transform: uppercase;
-  }
-  
-  nav 
-  #google_element {
-    width: 25%;
-    text-align: center;
-    border-radius: 15px;
-    /*background: red;*/
-  }
-  
-  nav .menu {
-    width: 40%;
-    display: flex;
-    justify-content:space-around;
+    body {
+        background-image: linear-gradient(
+            to right,
+            #C5FFF8 0%,
+            #5FBDFF 51%,
+            #C5FFF8 100%
+        );
+    }
     
-  }
-  
-  nav .menu a {
-    width: 25%;
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    margin-left: 10px;
-  }
-  
-  nav .menu a:first-child {
-    padding-left: 20px;
-  }
-  body{
-    background-image: linear-gradient(
-  to right,
-  #C5FFF8 0%,
-  #5FBDFF 51%,
-  #C5FFF8 100%
-);
-  }
-.heading{
-    font-weight: 900;
-    color:darkred;
-    font-size:50px;
-    font-family:'Times New Roman', Times, serif;
-}
-.heading:hover{
-  font-size:51px ;
-  cursor: pointer;
-}
-.name{
-  padding-top: 50px;
-  padding-bottom: 50px;
-  text-align: center;
-}
+    nav {
+        width: 100%;
+        height: auto;
+        min-height: 10vh;
+        background-color: #FF6C22;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        text-transform: uppercase;
+        padding: 10px 20px;
+        position: relative;
+    }
+    
+    #google_element {
+        width: 100%;
+        max-width: 300px;
+        text-align: center;
+        border-radius: 15px;
+        margin: 10px 0;
+    }
+    
+    nav .menu {
+        width: 100%;
+        max-width: 500px;
+        display: flex;
+        margin: 10px 0;
+    }
+    
+    nav .menu a {
+        padding: 10px;
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+        margin: 5px;
+        text-align: center;
+    }
+    
+    .heading {
+        font-weight: 900;
+        color: darkred;
+        font-size: 2.5rem;
+        font-family: 'Times New Roman', Times, serif;
+        transition: all 0.3s ease;
+    }
+    
+    .heading:hover {
+        transform: scale(1.02);
+        cursor: pointer;
+    }
+    
+    .name {
+        padding: 30px 20px;
+        text-align: center;
+    }
+    
+    span {
+        font-family: "Josefin Sans", sans-serif;
+    }
+    
+    .img {
+        max-width: 90%;
+        height: auto;
+        border-radius: 10px;
+        margin: 30px auto;
+        box-shadow: 10px 10px 30px 10px #183D3D;
+        display: block;
+    }
+    
+    .raigad-img {
+        width: 100%;
+        height: 400px;
+        border-radius: 10px;
+    }
+    
+    .history {
+        margin: 0 20px;
+        padding-top: 20px;
+    }
 
-.img{
-    height:400px;
-    width:600px;
-    border-radius: 10px;
-    margin-left: 450px;
-    box-shadow: 20px 20px 50px 15px #183D3D;
-    margin-top: 50px;
-  }
-  .raigad-img{
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
-  }
-  .history{
-    margin-left: 20px;
-    padding-top: 30px;
-    font-family: 'Times New Roman', Times, serif;
-  }
-  .paragraph{
-    font-size: 20px;
-    padding-left: 45px;
-    font-family: 'Times New Roman', Times, serif;
-  }
-  
-    </style>
+    .history ul{
+        margin-left: 100px;
+    }
+    
+    .paragraph {
+        font-size: 1rem;
+        padding: 10px 20px;
+        line-height: 1.6;
+    }
+    
+    .map_info {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px 0;
+    }
+    
+    .map {
+        width: 90%;
+        max-width: 600px;
+        height: 300px;
+        border: 0;
+        margin: 20px auto;
+    }
+    
+    .main_map {
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+    }
+    
+    ul a {
+        font-family: 'Times New Roman', Times, serif;
+        text-decoration: none;
+        color: mediumblue;
+        word-break: break-all;
+    }
+    
+    ul {
+        margin: 20px;
+        padding-left: 20px;
+    }
+    
+    li {
+        margin-bottom: 10px;
+        line-height: 1.6;
+    }
+    
+    .map_list {
+        width: 90%;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .map_list ul{
+        margin-left: 150px;
+    }
+    
+    .map_list h2 {
+        text-align: center;
+        font-family: 'Times New Roman', Times, serif;
+        color: darkmagenta;
+        margin: 20px 0;
+        font-size: 1.5rem;
+    }
+
+    /* Toggle button styles */
+    .menu-toggle {
+        display: none;
+        cursor: pointer;
+        color: white;
+        font-size: 24px;
+        padding: 10px;
+    }
+
+    /* Media Queries for different screen sizes */
+    @media (min-width: 768px) {
+        nav {
+            padding: 0 30px;
+            height: 10vh;
+        }
+
+        nav .menu {
+            width: 50%;
+            margin: 0;
+        }
+        
+        #google_element {
+            width: 30%;
+            margin: 0;
+        }
+        
+        .heading {
+            font-size: 3rem;
+        }
+        
+        .paragraph {
+            font-size: 1.1rem;
+            padding: 10px 40px;
+        }
+        
+        .img {
+            max-width: 70%; 
+        }
+
+        .map_info {
+            flex-direction: row;
+            align-items: flex-start;
+            padding: 40px 20px;
+        }
+        
+        .map {
+            width: 45%;
+            margin: 0 20px;
+        }
+        
+        .map_list {
+            width: 45%;
+            margin: 0 20px;
+        }
+        
+        .map_list h2 {
+            text-align: left;
+        }
+    }
+    
+    @media (min-width: 1024px) {
+        .img {
+            max-width: 600px;
+        }
+
+        .paragraph {
+            font-size: 1.2rem;
+            padding: 10px 60px;
+        }
+        
+        .heading {
+            font-size: 3.5rem;
+        }
+    }
+    
+    @media (max-width: 767px) {
+        .heading {
+            font-size: 2rem;
+        }
+
+        .history ul{
+            margin-left: 0 !important;
+        }
+
+        .history ul li{
+            font-size: 1rem;
+        }
+
+        .map_list ul{
+            margin-left: 10px;
+        }
+
+        .raigad-img {
+            height: 300px;
+        }
+        
+        nav .menu a {
+            width: 100%;
+            margin: 5px 0;
+        }
+        
+        .history span {
+            font-size: 2rem;
+        }
+        
+        .history text {
+            font-size: 1.5rem;
+        }
+
+        /* Mobile menu styles */
+        .menu-toggle {
+            display: block;
+        }
+
+        nav{
+            justify-content: end;
+        }
+
+        nav .menu {
+            display: none;
+            width: 100%;
+            flex-direction: column;
+        }
+
+        nav .menu.active {
+            display: flex;
+        }
+
+        #google_element {
+            display: none;
+            width: 100%;
+        }
+
+        #google_element.active {
+            display: block;
+        }
+    }
+</style>
 </head>
 <body>
     <header>
-        <nav>	
-            <div class="menu">
-              <a href="index.html">Home</a>
-              <a href="information.html">Go back</a>
-              
-            </div>
-              
-            <div id="google_element" align="right"></div> 
-        <script>
-            function loadGoogleTranslate() {
-              new google.translate.TranslateElement('google_element');
-            }
-            </script>
-              
-          </nav>
-          <section class="section">
+      <nav style="position: fixed; width: 100%; z-index: 1000;">    
+        <div class="menu-toggle" id="mobile-menu">
+            <i class="fas fa-bars"></i>
+        </div>
+        
+        <div class="menu" id="nav-menu">
+            <a href="index.html">Home</a>
+            <a href="information.html">Go back</a>
+        </div>
+            
+        <div id="google_element" align="right"></div> 
+    <script>
+        function loadGoogleTranslate() {
+            new google.translate.TranslateElement('google_element');
+        }
+
+        // Toggle menu function
+        document.getElementById('mobile-menu').addEventListener('click', function() {
+            const menu = document.getElementById('nav-menu');
+            const googleElement = document.getElementById('google_element');
+            
+            menu.classList.toggle('active');
+            googleElement.classList.toggle('active');
+        });
+    </script>
+    </nav>
+          <section class="section" style="padding-top: 80px;">
             <div class="name">
             <u class="heading"><text class="heading">VISAPUR FORT</text></u>
             </div>
